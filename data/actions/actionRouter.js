@@ -10,7 +10,7 @@ const router = express.Router()
 router.post('/', (req, res) => {
     actionModel.insert(req.body)
         .then(action => {
-            res.status(201).json({ message: 'Your action was created' })
+            res.status(201).json({ message: 'Your action was created' }, action)
         })
         .catch(err => {
             res.status(404).json({ message: 'There was an error creating your action', err })
@@ -24,10 +24,10 @@ router.post('/', (req, res) => {
 router.get('/', (req, res) => {
     actionModel.get(req.id)
         .then(action => {
-            res.status(200).json({ message: 'Here are your actions', action })
+            res.status(200).json({ message: 'Here are your actions', action }, action)
         })
         .catch(err => {
-            res.status(404).json({ message: 'There was an error fetching your actions' })
+            res.status(404).json({ message: 'There was an error fetching your actions' }, err)
         })
 })
 
@@ -39,13 +39,13 @@ router.put('/:id', (req, res) => {
     actionModel.update(req.params.id, req.body)
         .then(action => {
             if (action) {
-                res.status(200).json({ message: 'The action was updated' })
+                res.status(200).json({ message: 'The action was updated' }, action)
             } else {
                 res.status(404).json({ message: 'the action could not be found' })
             }
         })
         .catch(err => {
-            res.status(500).json({ message: 'there was an error updating your action' })
+            res.status(500).json({ message: 'there was an error updating your action' }, err)
         })
 })
 
@@ -63,7 +63,7 @@ router.delete('/:id', (req, res) => {
             }
         })
         .catch(err => {
-            res.status(500).json({ message: 'There was an error deleting the action' })
+            res.status(500).json({ message: 'There was an error deleting the action' }, err)
         })
 })
 
