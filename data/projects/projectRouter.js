@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
 // UPDATE
 // ######################################################################
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
     projectModel.update(req.params.id, req.body)
         .then(project => {
             if (projectModel) {

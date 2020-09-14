@@ -35,7 +35,7 @@ router.get('/', (req, res) => {
 // UPDATE
 // ######################################################################
 
-router.put('/', (req, res) => {
+router.put('/:id', (req, res) => {
     actionModel.update(req.params.id, req.body)
         .then(action => {
             if (action) {
