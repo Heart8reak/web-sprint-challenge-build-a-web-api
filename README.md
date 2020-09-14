@@ -61,10 +61,29 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
-1. Understand and explain the use of Middleware?
-1. The basic principles of the REST architectural style.
-1. Understand and explain the use of Express Routers.
-1. Describe tooling used to manually test the correctness of an API.
+---
+* Node.js is a Javascript runtime environment that achieves low latency and high throughput by taking a "non -blocking" approach to serving requests. It takes a different approach, it runs a single-threaded event loop registered with the system to handle connections, and each new connection causes a JavaScript callback function to fire. Express is the most popular node web framework, and is the underlying library for a number of other popular node web frameworks. It provides mechanisms to write handlers for requests with different HTTP verbs at different URL paths (routes). 
+
+2. Understand and explain the use of Middleware?
+---
+* Using middleware with Express can add functionality to any application. Middleware provides a way to extend the features provided by the Express framework. 
+
+3. The basic principles of the REST architectural style.
+---
+* everything is a resource
+* each resource is accesible via a unique URI
+* resources can have multiple representations
+* communication happens over a stateless protocol (HTTP)
+* resource management happens via HTTP methods
+
+4. Understand and explain the use of Express Routers.
+---
+* Using routing we can map incoming requests to the appropriate request handler based on the URL and HTTP Mthod used. 
+
+5. Describe tooling used to manually test the correctness of an API.
+---
+* Writing custom middleware to add more functionality to any application. 
+
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
