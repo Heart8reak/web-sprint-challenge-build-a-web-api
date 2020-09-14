@@ -3,6 +3,7 @@ const express = require('express')
 const helmet = require('helmet')
 
 const projectRouter = require('./data/projects/projectRouter')
+const actionRouter = require('./data/actions/actionRouter')
 
 const server = express()
 
@@ -11,6 +12,7 @@ server.use(helmet())
 server.use(logger)
 
 server.use('/api/projects', projectRouter)
+server.use('/api/actions', actionRouter)
 
 server.get('/', (req, res) => {
     res.send(`<h3>Don't worry , be happy :-)</h3>`)

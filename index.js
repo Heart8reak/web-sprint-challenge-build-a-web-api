@@ -17,7 +17,10 @@ const server = require('./server.js')
 
 const PORT = 5000
 
-server.listen(PORT, () => {
-    console.log(`\n*** Don't worry the Server is running on http://localhost:${PORT} ***`)
-})
+// server.listen(PORT, () => {
+//     console.log(`\n*** Don't worry the Server is running on http://localhost:${PORT} ***`)
+// })
 
+server.listen(PORT, () => {
+    console.log(`\n*** Server Running on http://localhost:${PORT} ***\n`)
+})
