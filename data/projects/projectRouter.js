@@ -59,7 +59,7 @@ router.put('/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     projectModel.remove(req.params.id)
         .then(project => {
-            if (porjects > 0) {
+            if (projects > 0) {
                 res.status(200).json({ message: 'the project was deleted succesfully' })
             } else {
                 res.status(404).json({ message: 'the project Id was not found' })
