@@ -12,3 +12,15 @@ I need this code, but don't know where, perhaps should make some middleware, don
 
 Go code!
 */
+
+const server = require('./server.js')
+
+const PORT = process.env.PORT || 5000
+
+// server.listen(PORT, () => {
+//     console.log(`\n*** Don't worry the Server is running on http://localhost:${PORT} ***`)
+// })
+
+server.listen(PORT, () => {
+    console.log(`\n*** Server Running on http://localhost:${PORT} ***\n`)
+})
